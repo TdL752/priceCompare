@@ -1,0 +1,90 @@
+body {
+    background-color: #272727;
+    max-width: 550px;
+}
+
+#title-div {
+    background-color: #2B50AA;
+    padding: 50px 30px 50px 30px;
+    border-radius: 20px;
+    margin: 40px;
+    font-size: 15px;
+    color: #FFD4D4;
+}
+
+#title {
+    font-family: poetsen one, sans-serif;
+}
+
+#title-exp {
+    font-family: ancizar sans, sans-serif;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#input-product {
+    background-color: #FF9FE5;
+    padding: 10px;
+    margin: 40px;
+    border-radius: 20px;
+    display: flex;
+}
+
+input, select {
+    margin: 5px auto 5px auto;
+    width: 75%;
+    border: 2px solid #272727;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#product-1, #product-2 {
+    font-family: ancizar sans, sans-serifi;
+    color: #272727;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+#product-1 {
+    border-radius: 20px 0 0 20px;
+    padding-right: 0px;
+}
+
+#product-2 {
+    border-radius: 0 20px 20px 0;
+    padding-left: 0px;
+}
+
+#enter-btn {
+    padding: 5px 30px 5px 30px;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: ancizar sans, sans-serif;
+    margin: 40px auto 40px auto;
+    display: block;
+    border-radius: 20px;
+    border: 5px solid #2B50AA;
+    background-color: #FFD4D4;
+}
+
+#enter-btn:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+
+#enter-btn:active {
+    background-color: rgba(120, 100, 90, 1);
+}
+
+#result-div {
+    background-color: #FF858D;
+    font-family: ancizar sans, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 40px;
+    margin: 40px;
+    border-radius: 20px;
+}
