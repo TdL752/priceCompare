@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Price Compare</title>
+        <link rel="stylesheet" href="priceCompare.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Poetsen+One&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="title-div">
+            <h1 id="title">
+                <em>Price Compare</em>
+            </h1>
+            <h2 id="title-exp">
+                Enter prices and volume to check for the dollar amount per measurement
+            </h2>
+        </div>
+        <div id="input-product">
+            <div id="product-1">
+                <h3 class="header">
+                    Product 1
+                </h3>
+                <input type="text" placeholder="Product Name" id="product-1-name" />
+                <input type="number" placeholder="Price" id="product-1-price" />
+                <input type="number" placeholder="Volume" id="product-1-volume" />
+                <select id="volume-select-product-1">
+                    <option selected>
+                        Pounds
+                    </option>
+                    <option>
+                        Items
+                    </option>
+                    <option>
+                        Ounces
+                    </option>
+                </select>
+            </div>
+            <div id="product-2">
+                <h3 class="header">
+                    Product 2
+                </h3>
+                <input type="text" placeholder="Product Name" id="product-2-name" />
+                <input type="number" placeholder="Price" id="product-2-price" />
+                <input type="number" placeholder="Volume" id="product-2-volume" />
+                <select id="volume-select-product-2">
+                    <option selected>
+                        Pounds
+                    </option>
+                    <option>
+                        Items
+                    </option>
+                    <option>
+                        Ounces
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div id="result-div">
+            <button type="button" id="enter-btn">
+                Enter
+            </button>
+            <div id="result-msg">
+            </div>
+        </div>
+        <script src="priceCompare.js"></script>
+    </body>
+</html>
