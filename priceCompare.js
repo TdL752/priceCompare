@@ -27,6 +27,22 @@ const product = () => {
     product2.price = product2Price.value;
     product2.volume = product2Volume.value;
 
+    let volume;
+
+    switch (product1Select.value) {
+        case "Pounds":
+            volume = "pound";
+            break;
+        case "Items":
+            volume = "item";
+            break;
+        case "Ounces":
+            volume = "ounce";
+            break;
+        default:
+            volume = product1.volume;
+    }
+
     let valueArr = [product1Name.value, product1Price.value, product1Volume.value, product2Name.value, product2Price.value, product2Volume.value];
 
     let priceFor1 = (product1.price / product1.volume).toFixed(2);
@@ -67,10 +83,10 @@ const product = () => {
     if(priceFor1 > priceFor2) {
         resultMsg.innerHTML = `
             <p>
-                ${product1.name} is  more expensive per ${product2Select.value} than ${product2.name}
+                ${product1.name} is  more expensive per ${volume} than ${product2.name}
             </p>
             <p>
-                ${product1.name} is $${(priceFor1 - priceFor2).toFixed(2)} more per ${product1Select.value} than ${product2.name}
+                ${product1.name} is $${(priceFor1 - priceFor2).toFixed(2)} more per ${volume} than ${product2.name}
             </p>
         `;
         document.getElementById("product-1").style.backgroundColor = "rgba(255, 0, 0, .7";
@@ -79,10 +95,10 @@ const product = () => {
     } else if(priceFor1 < priceFor2) {
         resultMsg.innerHTML = `
             <p>
-                ${product2.name} is  more expensive per ${product1Select.value} than ${product1.name}
+                ${product2.name} is  more expensive per ${volume} than ${product1.name}
             </p>
             <p>
-                ${product2.name} is $${(priceFor2 - priceFor1).toFixed(2)} more per ${product2Select.value} than ${product1.name}
+                ${product2.name} is $${(priceFor2 - priceFor1).toFixed(2)} more per ${volume} than ${product1.name}
             </p>
         `;
         document.getElementById("product-2").style.backgroundColor = "rgba(255, 0, 0, .7";
