@@ -1,6 +1,5 @@
 body {
     background-color: #272727;
-    max-width: 550px;
 }
 
 #title-div {
@@ -14,6 +13,7 @@ body {
 
 #title {
     font-family: poetsen one, sans-serif;
+    text-align: center;
 }
 
 #title-exp {
@@ -28,6 +28,7 @@ body {
     margin: 40px;
     border-radius: 20px;
     display: flex;
+    justify-content: center;
 }
 
 input, select {
@@ -84,7 +85,7 @@ input, select {
     text-align: center;
     font-weight: bold;
     font-size: 20px;
-    padding: 40px;
+    padding: 25px;
     margin: 40px;
     border-radius: 20px;
 }

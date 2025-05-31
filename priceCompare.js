@@ -29,10 +29,20 @@ const product = () => {
 
     let valueArr = [product1Name.value, product1Price.value, product1Volume.value, product2Name.value, product2Price.value, product2Volume.value];
 
-    let priceFor1 = product1.price / product1.volume;
-    let priceFor2 = product2.price / product2.volume;
+    let priceFor1 = (product1.price / product1.volume).toFixed(2);
+    let priceFor2 = (product2.price / product2.volume).toFixed(2);
 
     console.log(priceFor1, priceFor2);
+
+    if (priceFor1 === priceFor2) {
+        console.log("same");
+        resultMsg.innerHTML = `
+            <p>
+                ${product1.name} is the same price as ${product2.name}
+            </p>
+        `;
+        return;
+    }
 
     for(let i = 0; i < valueArr.length; i++) {
         if(valueArr[i] === "") {
@@ -52,14 +62,9 @@ const product = () => {
             </p>
         `;
         return;
-    } else if (priceFor1 === priceFor2) {
-        resultMsg.innerHtml = `
-            <p>
-                ${product1.name} is the same price as ${product2.name}
-            </p>
-        `;
-        return;
-    } else if(priceFor1 > priceFor2) {
+    };
+    
+    if(priceFor1 > priceFor2) {
         resultMsg.innerHTML = `
             <p>
                 ${product1.name} is  more expensive per ${product2Select.value} than ${product2.name}
@@ -82,6 +87,13 @@ const product = () => {
         `;
         document.getElementById("product-2").style.backgroundColor = "rgba(255, 0, 0, .7";
         document.getElementById("product-1").style.backgroundColor = "rgba(0, 255, 0, .7";
+        return;
+    } else {
+        resultMsg.innerHTML = `
+        <p>
+            An error has occured
+        </p>
+        `;
         return;
     };
 };
